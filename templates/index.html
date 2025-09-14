@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IceCream Parlor - Home</title>
+  <link rel="stylesheet" href="../static/index.css">
+</head>
+
+
+
+<body>
+  <header>
+    <nav class="navbar">
+     <div class="logo">🍦 Happy Scoops </div>
+      <h1><div class="logo" > Your Ice-Cream Parlour </div></h1>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+  <h1 style="text-align: center;">Welcome to the Sweetest Place!</h1>
+  <h3><p style="text-align: center;"> Delicious ice creams made with love 🍨</p></h3>
+   
+       <!-- <div style="text-align: center;">
+      <img src="{{ url_for('static', filename='images/image.png') }}" alt="Ice Cream Display" style="width: 700px; margin: 20px 0;">
+      <img src="{{ url_for('static', filename='images/front.jpg') }}" alt="Front of Ice Cream Shop" style="width: 700px; margin: 20px 0;">
+    </div> -->
+
+    <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="{{ url_for('static', filename='images/photo2.png') }}" alt="Ice Cream 1">
+  </div>
+  <div class="slide fade">
+    <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Ice Cream 2">
+  </div>
+  <div class="slide fade">
+    <img src="{{ url_for('static', filename='images/image.png') }}" alt="Ice Cream 3">
+  </div>
+</div>
+
+
+
+</section>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+
+<footer>
+<div class="contact-info">
+      <p>📍 <strong>Address:</strong> City Center, Hazratganj, Lucknow ,Uttar pradesh</p>
+      <p>📞 <strong>Phone:</strong> +91 8005016125</p>
+      <p>📧 <strong>Email:</strong> contact@happyscoops.com</p>
+      <p>🕒 <strong>Timings:</strong> 11:00 AM – 11:00 PM (All Days)</p>
+    </div>
+
+     <div class="social">
+      <h2>Connect With Us</h2>
+      <a href= "Happy Scoops">Facebook</a> |
+      <a href= "Happy Scoops">Instagram</a> |
+      <a href= "Happy Scoops">Twitter</a>
+    </div> 
+
+
+    © 2025 Happy scoops | All Rights Reserved
+  </footer>
+
+
+</body>
+</html> 
+
+ 

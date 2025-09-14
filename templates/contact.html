@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IceCream Parlor - Contact</title>
+  <link rel="stylesheet" href="../static/contact.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🍦 Happy Scoops</div>
+      <h1><div class="logo" > Your Ice-Cream Parlour </div></h1>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h1>Order Details</h1>
+    <form method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="number" name="mobile_number" placeholder="mobile number" required>
+
+      <input type="text" name="address" placeholder="Your Address" required>
+       <textarea name="orders" placeholder="Your orders" required></textarea>
+      <button type="submit">Place Order</button>
+    </form>
+
+    {% if success %}
+      <p style="color:green; margin-top:10px;">✅ Message sent successfully!</p>
+    {% elif success == False and request.method == 'POST' %}
+      <p style="color:red; margin-top:10px;">⚠️ Please fill all fields correctly.</p>
+    {% endif %}
+
+
+
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+  </section>
+
+
+<footer>
+
+  <div class="contact-info">
+      <p>📍 <strong>Address:</strong> City Center, Hazratganj, Lucknow, Uttar pradesh </p>
+      <p>📞 <strong>Phone:</strong> +91 8005016125</p>
+      <p>📧 <strong>Email:</strong> contact@happyscoops.com</p>
+      <p>🕒 <strong>Timings:</strong> 11:00 AM – 11:00 PM (All Days)</p>
+  </div>
+
+
+   <div class="social">
+      <h2>Connect With Us</h2>
+      <a href= "Happy Scoops">Facebook</a> |
+      <a href="Happy Scoops">Instagram</a> |
+      <a href="Happy Scoops">Twitter</a>
+    </div>
+    
+
+
+  
+    © 2025 Happy scoops | All Rights Reserved
+  </footer> 
+
+
+
+
+
+
+
+
+</body>
+</html>

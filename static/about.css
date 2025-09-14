@@ -1,0 +1,158 @@
+/* =========================
+   General Styles
+========================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  color: #333;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, #c276ba,#6320ff);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  text-decoration: wavy;
+  color: #201e1f;
+}
+
+/* =========================
+   About Section
+========================= */
+.about {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(145deg, #fff, #ffe6f1);
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.about h1 {
+  font-size: 2.2rem;
+  color: #ff5ca2;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about {
+  animation: fadeIn 600ms ease-in-out;
+}
+
+
+
+
+
+
+/* Social Section */
+
+
+
+
+.social {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.social h2 {
+  margin-bottom: 1rem;
+  color: #0afa1e;
+}
+
+.social a {
+  text-decoration: none;
+  color: #53c5f1;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s;
+  }
+
+.social a:hover {
+  color: #ff5ca2;
+}
+
+
+
+ /* Footer  */
+
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  background: linear-gradient(90deg, #535053,#0896ce);
+  color: rgb(255, 254, 254);
+  font-size: 0.9rem;
+  border-radius: 100px 100px 0px 0px;
+}
+
+/* Contact Info */
+
+
+
+.contact-info {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-info strong {
+  color: #ed60e1;
+}
+
+
+
+
+
+
+ 

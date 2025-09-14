@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IceCream Parlor - Menu</title>
+  <link rel="stylesheet" href="../static/menu.css">
+</head>
+
+
+
+<body>
+  <header>
+    <nav class="navbar">
+     <div class="logo">🍦 Happy Scoops</div>
+      <h1><div class="logo" > Your Ice-Cream Parlour </div></h1>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+
+
+      
+      <div class="menu-card">
+        <h3>🍓 Strawberry Delight</h3>
+        <img src="{{ url_for('static', filename='images/strawberry.jpeg') }}" alt="Strawberry Delight">
+      </div>
+
+      <div class="menu-card">
+        <h3>🍫 Chocolate Heaven</h3>
+        <img src="{{ url_for('static', filename='images/chocolate.jpg') }}" alt="Chocolate Heaven">
+      </div>
+
+      <div class="menu-card">
+        <h3>🍋 Lemon Sorbet</h3>
+        <img src="{{ url_for('static', filename='images/lemon.jpg') }}" alt="Lemon Sorbet">
+      </div>
+
+      <div class="menu-card">
+        <h3>🥭 Mango Magic</h3>
+        <img src="{{ url_for('static', filename='images/mango.jpg') }}" alt="Mango Magic">
+      </div>
+
+      <div class="menu-card">
+  <h3>🍪 Cookies & Cream</h3>
+  <img src="{{ url_for('static', filename='images/cookiescream.jpeg') }}" alt="Cookies and Cream">
+</div>
+
+<div class="menu-card">
+  <h3>🍵 Matcha Green Tea</h3>
+  <img src="{{ url_for('static', filename='images/matcha.jpeg') }}" alt="Matcha Green Tea">
+</div>
+
+<div class="menu-card">
+  <h3>🌰 Pistachio Bliss</h3>
+  <img src="{{ url_for('static', filename='images/pistachios.jpeg') }}" alt="Pistachio Bliss">
+</div>
+
+<div class="menu-card">
+  <h3>🥥 Dry- Fruits</h3>
+  <img src="{{ url_for('static', filename='images/dryfruits.jpeg') }}" alt="dry fruits">
+</div>
+
+
+    </div>
+  </section>
+
+
+
+  <footer>
+
+<div class="contact-info">
+      <p>📍 <strong>Address:</strong> City Center, Hazratganj, Lucknow, Uttar pradesh </p>
+      <p>📞 <strong>Phone:</strong> +91 8005016125</p>
+      <p>📧 <strong>Email:</strong> contact@happyscoops.com</p>
+      <p>🕒 <strong>Timings:</strong> 11:00 AM – 11:00 PM (All Days)</p>
+    </div>
+
+     <div class="social">
+      <h2>Connect With Us</h2>
+      <a href= "Happy Scoops">Facebook</a> |
+      <a href="Heera's_Invitation">Instagram</a> |
+      <a href="Heera's_Invitation">Twitter</a>
+    </div>
+  </div>
+  
+  
+    © 2025 Happy scoops | All Rights Reserved
+  </footer>
+</body>
+</html>
