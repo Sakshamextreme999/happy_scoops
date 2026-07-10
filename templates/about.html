@@ -3,68 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Scoops - About</title>
-  <link rel="stylesheet" href="../static/about.css">
+  <title>Happy Scoops - About Us</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="floating-scoop scoop-1">🍦</div>
+    <div class="floating-scoop scoop-2">🍨</div>
+    <div class="floating-scoop scoop-3">✨</div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
   <header>
-    <nav class="navbar">
-      <div class="logo">🍦 Happy Scoops</div>
-      <h1><div class="logo" > Your Ice-Cream Parlour </div></h1>
-      <ul class="nav-links">
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('menu') }}">Menu</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
-        <li><a href="{{ url_for('contact') }}">Order</a></li>
-      </ul>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="logo-container">
+          <div class="logo-icon">🍦</div>
+          <div class="logo-text">
+            <span class="logo-main">Happy Scoops</span>
+            <span class="logo-sub">Premium Ice Cream</span>
+          </div>
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+          <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+          <li><a href="{{ url_for('menu') }}" class="nav-link">Menu</a></li>
+          <li><a href="{{ url_for('about') }}" class="nav-link active">About</a></li>
+          <li><a href="{{ url_for('contact') }}" class="nav-link cta-nav">Order Now</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <section class="about">
-    <h1>About Us</h1>
-<!-- <p>We are a family-owned ice cream parlor, serving happiness since 1999.</p>
-    <p>Our mission is to make your day sweeter with fresh, creamy treats!</p> -->
-    <h2>🍨 About Happy Scoops</h2>
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Story</span>
+        <h1 class="section-title">About <span class="gradient-text">Happy Scoops</span></h1>
+      </div>
+    </div>
+  </section>
 
+  <!-- About Content -->
+  <section class="about-content">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Where Every Scoop Brings a Smile 🍨</h2>
+          <p>At Happy Scoops, we believe that every scoop of ice cream should bring a smile. What started as a small dream to serve happiness in a cone has now become a delightful destination for ice cream lovers of all ages.</p>
+          
+          <p><strong>Founded in 2022,</strong> Happy Scoops began with a simple idea: to make fresh, handcrafted ice cream with real ingredients and exciting flavors.</p>
+          
+          <p>From classic vanilla and chocolate to adventurous creations like blueberry cheesecake, coffee crunch, and tropical fruit blends, every flavor is made with care and creativity.</p>
+        </div>
 
-  <p>
-    At Happy Scoops, we believe that every scoop of ice cream should bring a smile.
-  What started as a small dream to serve happiness in a cone has now become a delightful destination for ice cream lovers of all ages.</li>
-  </p>
-  
-<p>
-  <b>Founded in 2022,</b> Happy Scoops began with a simple idea: to make fresh, handcrafted ice cream with real ingredients and exciting flavors.
-</p>
+        <div class="about-image">
+          <div class="image-card">
+            <img src="{{ url_for('static', filename='images/front.jpg') }}" alt="Happy Scoops Store" loading="lazy">
+          </div>
+        </div>
+      </div>
 
-  From classic vanilla and chocolate to adventurous creations like blueberry cheesecake, coffee crunch, and tropical fruit blends, every flavor is made with care and creativity.
+      <!-- Stats Section -->
+      <div class="stats-section">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-ice-cream"></i>
+          </div>
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Flavors</div>
+        </div>
 
-<p>
-Our journey started with a single shop that quickly became a favorite hangout spot for families, friends, and students. Over the years, we’ve grown not just in flavors but in community, bringing people together over shared love for cold, creamy goodness.
-</p>
-<p>
-At Happy Scoops, ice cream isn’t just dessert—it’s a moment of joy, a reason to celebrate, and a memory to cherish. Whether you’re here for a single scoop, a sundae, or a new seasonal surprise, we promise every visit will leave you happier than before.</p>
-</ul>
- </section>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-number" data-target="10000">0</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
 
- <footer>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
 
- <div class="contact-info">
-      <p>📍 <strong>Address:</strong> City Center, Hazratganj, Lucknow, Uttar pradesh </p>
-      <p>📞 <strong>Phone:</strong> +91 8005016125</p>
-      <p>📧 <strong>Email:</strong> contact@happyscoops.com</p>
-      <p>🕒 <strong>Timings:</strong> 11:00 AM – 11:00 PM (All Days)</p>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">% Natural</div>
+        </div>
+      </div>
+
+      <!-- Mission & Vision -->
+      <div class="mission-vision">
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Our Mission</h3>
+          <p>To create unforgettable ice cream experiences using the finest natural ingredients, innovative flavors, and heartfelt service that brings joy to every customer.</p>
+        </div>
+
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Our Vision</h3>
+          <p>To become the most loved ice cream brand known for quality, innovation, and spreading happiness one scoop at a time across every community we serve.</p>
+        </div>
+
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Our Values</h3>
+          <p>Quality first, customer happiness, sustainable sourcing, community care, and continuous innovation in creating delightful frozen treats for all.</p>
+        </div>
+      </div>
+
+      <!-- Story Section -->
+      <div class="story-section">
+        <h2>Our Journey</h2>
+        <div class="story-content">
+          <p>Our journey started with a single shop that quickly became a favorite hangout spot for families, friends, and students. Over the years, we've grown not just in flavors but in community, bringing people together over shared love for cold, creamy goodness.</p>
+          
+          <p>At Happy Scoops, ice cream isn't just dessert—it's a moment of joy, a reason to celebrate, and a memory to cherish. Whether you're here for a single scoop, a sundae, or a new seasonal surprise, we promise every visit will leave you happier than before.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon-small">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h4>100% Natural Ingredients</h4>
+            <p>Fresh, organic ingredients sourced from trusted local farms</p>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-small">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h4>Handcrafted Daily</h4>
+            <p>Every batch is made fresh with love and attention to detail</p>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-small">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h4>Customer Satisfaction</h4>
+            <p>Your happiness is our top priority in everything we do</p>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon-small">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h4>Sustainable Practices</h4>
+            <p>Eco-friendly packaging and responsible sourcing</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="about-cta">
+        <h2>Ready to Experience the Magic?</h2>
+        <p>Visit us today and taste the difference that quality and passion make</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">
+          <span>Order Now</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+      </svg>
     </div>
 
-     <div class="social">
-      <h2>Connect With Us</h2>
-      <a href= "Happy Scoops">Facebook</a> |
-      <a href="Heera's_Invitation">Instagram</a> |
-      <a href="Heera's_Invitation">Twitter</a>
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="logo-icon">🍦</div>
+          <div class="logo-text">
+            <span class="logo-main">Happy Scoops</span>
+            <span class="logo-sub">Premium Ice Cream</span>
+          </div>
+        </div>
+        <p class="footer-desc">Crafting happiness, one scoop at a time.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="{{ url_for('home') }}"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="{{ url_for('menu') }}"><i class="fas fa-chevron-right"></i> Menu</a></li>
+          <li><a href="{{ url_for('about') }}"><i class="fas fa-chevron-right"></i> About</a></li>
+          <li><a href="{{ url_for('contact') }}"><i class="fas fa-chevron-right"></i> Order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> City Center, Hazratganj, Lucknow, UP</li>
+          <li><i class="fas fa-phone"></i> +91 8005016125</li>
+          <li><i class="fas fa-envelope"></i> contact@happyscoops.com</li>
+          <li><i class="fas fa-clock"></i> 11:00 AM – 11:00 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
     </div>
-  </div>
-  
-  
-    © 2025 Happy scoops | All Rights Reserved
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Happy Scoops | All Rights Reserved</p>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
