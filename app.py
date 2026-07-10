@@ -1,15 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import mysql.connector
+import os
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # needed for flash messages
 
 # MySQL connection
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Gupta@123",   # replace with your MySQL password
-    database="happy_scoops"
+    host=os.environ.get("MYSQLHOST"),
+    port=int(os.environ.get("MYSQLPORT")),
+    user=os.environ.get("MYSQLUSER"),
+    password=os.environ.get("MYSQLPASSWORD"),
+    database=os.environ.get("MYSQLDATABASE")
 )
 cursor = db.cursor()
 
