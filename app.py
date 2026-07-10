@@ -6,6 +6,7 @@ app = Flask(__name__)
 app.secret_key = "your_secret_key"  # needed for flash messages
 
 # MySQL connection
+
 db = mysql.connector.connect(
     host=os.environ.get("MYSQLHOST"),
     port=int(os.environ.get("MYSQLPORT")),
@@ -13,6 +14,18 @@ db = mysql.connector.connect(
     password=os.environ.get("MYSQLPASSWORD"),
     database=os.environ.get("MYSQLDATABASE")
 )
+
+
+
+# db = mysql.connector.connect(
+#     host="localhost",
+#     port=3306,
+#     user="root",
+#     password="Gupta@123",
+#     database="happy_scoops"
+# )
+
+
 cursor = db.cursor()
 
 # Routes
