@@ -274,6 +274,6 @@ happy_scoops/
 
 ---
 
-**Made with ❤️ and 🍦 by Kiro AI**
+**Made with ❤️ **
 
 Enjoy your premium ice cream website! 🎉
