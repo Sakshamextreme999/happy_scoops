@@ -1,3 +1,6 @@
+Deployment live link 
+https://happy-scoops.onrender.com/
+
 # 🍦 Happy Scoops - Premium Ice Cream Parlor
 
 ## ✨ Premium UI Redesign
